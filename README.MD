@@ -86,7 +86,7 @@ The following is the Relationship Diagram:
 - A Project can only have one manager and multiple employees.
 - Deleting Manager updates sets ProjectManager in Project Table as null, for related records
 - Deleting Employees deletes corresponding record in ProjectEmployee Table and Manager Table
-- A Manager of the project cannot be added as an employee.
+- A Manager of the project cannot be added as an employee of the same Project.
 
 ## API Docs
 
