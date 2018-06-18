@@ -67,11 +67,6 @@ Node(v8.10), Mysql up and running
 $ knex migrate:rollback
 ```
 
-In Case of any query contact,
-Pulankit Panjwani
-[Email:pulankit@gmail.com](mailto:pulankit@gmail.com)
-PhoneNumber:+919760252857
-
 ## DataBase Design
 
 The Project Contains four tables
@@ -96,3 +91,8 @@ The following is the Relationship Diagram:
 ## API Docs
 
 Please refer [API DOCS](./APIDOC.MD)
+
+In Case of any query contact,
+Pulankit Panjwani
+[Email:pulankit@gmail.com](mailto:pulankit@gmail.com)
+PhoneNumber:+919760252857
