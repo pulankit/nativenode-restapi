@@ -71,3 +71,28 @@ In Case of any query contact,
 Pulankit Panjwani
 [Email:pulankit@gmail.com](mailto:pulankit@gmail.com)
 PhoneNumber:+919760252857
+
+## DataBase Design
+
+The Project Contains four tables
+
+1.  Employee
+2.  Project
+3.  Manager
+4.  ProjectEmployee
+
+The following is the Relationship Diagram:
+
+![ERD Office App](./image/ERD.png)
+
+## Important Points
+
+- A Manager can have one or more projects.
+- A Project can only have one manager and multiple employees.
+- Deleting Manager updates sets ProjectManager in Project Table as null, for related records
+- Deleting Employees deletes corresponding record in ProjectEmployee Table and Manager Table
+- A Manager of the project cannot be added as an employee.
+
+## API Docs
+
+Please refer [API DOCS](./APIDOC.MD)
