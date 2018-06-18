@@ -23,7 +23,7 @@ export default class Route {
   async put(req) {
     let body = JSON.parse(req.body);
     let id = req.params[0];
-    if (this.validateParam(id)) return this.model.update(id, data);
+    if (this.validateParam(id)) return this.model.update(id, body);
   }
   async delete(req) {
     let id = req.params[0];
@@ -38,8 +38,12 @@ export default class Route {
   isValidRequest(req) {
     let { body, method } = req;
     if (method == "POST" || method == "PUT") {
-      body = JSON.parse(body);
-      return this.model.isValidData(body);
+      try {
+        body = JSON.parse(body);
+        return this.model.isValidData(body);
+      } catch (e) {
+        return false;
+      }
     }
     return true;
   }

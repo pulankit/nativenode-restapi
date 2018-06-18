@@ -18,6 +18,7 @@ exports.up = async function(knex) {
     table
       .integer("EmployeeId")
       .unsigned()
+      .unique()
       .references("EmployeeId")
       .inTable("Employee")
       .notNull()
@@ -33,10 +34,11 @@ exports.up = async function(knex) {
     table.string("Description");
     table
       .integer("ProjectManager")
+      .default(null)
       .unsigned()
       .references("ManagerId")
       .inTable("Manager")
-      .notNull();
+      .onDelete("set null");
   });
   await knex.schema.createTable("ProjectEmployee", function(table) {
     table.primary(["EmployeeId", "ProjectId"]);
