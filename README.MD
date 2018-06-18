@@ -78,7 +78,7 @@ The Project Contains four tables
 
 The following is the Relationship Diagram:
 
-![ERD Office App](./image/ERD.png)
+![ERD Office App](./image/ERD-1.png)
 
 ## Important Points
 
